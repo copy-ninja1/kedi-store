@@ -10,6 +10,7 @@ class productCard extends Component {
         style={{ width: "100%" }}
         cover={
           <img
+            style={{ height: "250px" }}
             alt="example"
             src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
           />

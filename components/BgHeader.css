@@ -1,0 +1,156 @@
+.section {
+    height: 350px
+}
+
+@media screen and (min-width: 576px) {
+    .section {
+        height: 400px
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section {
+        height: 450px
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .section {
+        height: 500px
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .section {
+        height: 700px
+    }
+}
+
+/* --------------------- */
+
+@media (min-width: 1220px) {
+    .container {
+        max-width: 1170px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        width: 100%;
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.subContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1220px) {
+    .bigTextBox {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .bigTextBox {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bigTextBox {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .bigTextBox {
+        width: 100%;
+    }
+}
+
+.bigTextBox {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* ------------------------ */
+
+.bigText {
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+@media screen and (min-width: 576px) {
+    .bigText {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bigText {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .bigText {
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    .bigText {
+        font-size: 46px;
+        margin-bottom: 25px;
+    }
+}
+
+/* --------------------- */
+
+.slantRect {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.slantRect svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
