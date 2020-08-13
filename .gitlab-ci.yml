@@ -11,14 +11,17 @@ cache:
 
 stages:
   - build
-  - server
 
 build:
   stage: build
   script:
     - npm install -g @quasar/cli
     - npm install
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
     - quasar build -m ssr
+    - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY
     # - mv _redirects dist/ssr
   artifacts:
     paths:
@@ -26,17 +29,14 @@ build:
   only:
     - master
 
-server:
-  # type: server
-  stage: server
-  image: ruby:latest
-  script:
-    - apt-get update -qy
-    - apt-get install -y ruby-dev
-    - gem install dpl
-    - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY
-  artifacts:
-    paths:
-      - dist/ssr
-  only:
-    - master
+# server:
+#   # type: server
+#   stage: server
+#   image: ruby:latest
+#   script:
+
+#   artifacts:
+#     paths:
+#       - dist/ssr
+#   only:
+#     - master
