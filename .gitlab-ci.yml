@@ -15,6 +15,7 @@ build:
     - npm install -g @quasar/cli
     - npm install --progress=false
     - quasar build -m ssr
+    - mkdir public
     - mv public public-vue # GitLab Pages hooks on the public folder
     - mv dist public # rename the dist folder (result of npm run build)
   artifacts:
