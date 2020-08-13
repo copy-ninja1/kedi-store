@@ -15,9 +15,11 @@ build:
     - npm install -g @quasar/cli
     - npm install --progress=false
     - quasar build -m ssr
-  artifacts: 
-    paths: 
-      - dist/ssr
+    - mv public public-vue # GitLab Pages hooks on the public folder
+    - mv dist public # rename the dist folder (result of npm run build)
+  artifacts:
+    paths:
+      - public/ssr
 deploy:
   stage: deploy
   image: "ruby:2.5"
@@ -28,7 +30,6 @@ deploy:
     - gem install dpl
     # deploy to heroku:
     - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY --skip_cleanup
-
 # environment:
 #   name: develop
 #   url: https://sandy-kedi-store.herokuapp.com
