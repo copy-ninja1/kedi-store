@@ -8,9 +8,9 @@
   "author": "spect1 <emmajnrk@gmail.com>",
   "private": true,
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0",
     "postinstall": "bash install.sh",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo \"No test specified\" && exit 1"
   },
   "dependencies": {
     "@quasar/extras": "^1.9.4",

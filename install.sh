@@ -1,21 +1,13 @@
 #!/bin/bash
-echo  ' - Alright, here we go. trigerring auto deploy .. ..'  &&  echo
-
-
-
+echo ' - Alright, here we go. trigerring auto deploy .. ..'
 
 installDependencies() {
-    echo  " Installing application dependencies .. .."  &&  echo
+    echo " Installing application dependencies .. .."
     npm install -g @quasar/cli
-    npm install --progress=false
+    npm install
     quasar build -m ssr
-}
-
-
-
-start() {
     cd dist/ssr
-    
 }
 
-installDependencies && start
+
+installDependencies

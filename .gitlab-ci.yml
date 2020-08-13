@@ -10,7 +10,7 @@ stages:
 
 deploy:
   stage: deploy
-  image: "ruby:2.5"
+  image: ruby:latest
   script:
     # install dpl:
     - apt-get update -qy
