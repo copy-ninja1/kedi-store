@@ -1,0 +1,41 @@
+image: node:latest
+
+cache:
+  untracked: true
+  paths:
+    - node_modules/
+before_script:
+  - apt-get update -qy
+  - apt-get install -y ruby-dev
+  - gem install dpl
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install -g @quasar/cli
+    - npm install
+    - quasar build -m ssr
+    - mv _redirects dist/ssr
+  artifacts:
+    paths:
+      - dist/ssr
+  only:
+    - master
+
+server:
+  type: deploy
+  stage: server
+  image: ruby:latest
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY
+
+  only:
+    - master
+    - staging

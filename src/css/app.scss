@@ -1,0 +1,58 @@
+// app global css in SCSS form
+// .acc-card{
+//     max-width: 500px;
+// }
+
+a {
+  text-decoration: none;
+}
+//
+.centered {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.center {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.form-xy-center {
+  position: relative;
+  top: calc(100vh - 80vh);
+  max-width: 500px;
+  margin: auto;
+}
+/**
+reduse icon font weight
+**/
+.form-icon-weight {
+  -webkit-text-stroke: 6px white;
+}
+.header {
+  background-color: #123197;
+  background-image: linear-gradient(315deg, #1d44cb 0%, #123197 100%);
+
+  background-repeat: repeat;
+  background-position: 0 50%;
+}
+
+@for $b from 0 to 2 {
+  .border-dark-top-#{$b} {
+    border-top: ($b) + px solid $dark-border;
+  }
+  .border-dark-bottom-#{$b} {
+    border-bottom: ($b) + px solid $dark-border;
+  }
+  .border-dark-#{$b} {
+    border: ($b) + px solid $dark-border;
+  }
+}
+
+.bg-color {
+  background-color: #123197;
+  background-image: linear-gradient(315deg, #1d44cb 0%, #123197 100%);
+
+  //     rgb(0, 109, 200) 100%
+}
