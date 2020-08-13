@@ -4,10 +4,10 @@ cache:
   untracked: true
   paths:
     - node_modules/
-before_script:
-  - apt-get update -qy
-  - apt-get install -y ruby-dev
-  - gem install dpl
+# before_script:
+#   - apt-get update -qy
+#   - apt-get install -y ruby-dev
+#   - gem install dpl
 
 stages:
   - build
@@ -35,7 +35,8 @@ server:
     - apt-get install -y ruby-dev
     - gem install dpl
     - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY
-
+  artifacts:
+    paths:
+      - dist/ssr
   only:
     - master
-    - staging
