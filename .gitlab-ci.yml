@@ -30,8 +30,8 @@ deploy:
     # deploy to heroku:
     - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY --skip_cleanup
 
-environment:
-  name: develop
-  url: https://sandy-kedi-store.herokuapp.com
-  only:
-    - develop
+# environment:
+#   name: develop
+#   url: https://sandy-kedi-store.herokuapp.com
+#   only:
+#     - develop
