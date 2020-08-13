@@ -4,10 +4,6 @@ cache:
   untracked: true
   paths:
     - node_modules/
-# before_script:
-#   - apt-get update -qy
-#   - apt-get install -y ruby-dev
-#   - gem install dpl
 
 stages:
   - build
@@ -16,28 +12,26 @@ stages:
 build:
   stage: build
   script:
-  - npm install -g @quasar/cli
-  - npm install --progress=false
-  - quasar build -m ssr
-  - npm run build
+    - npm install -g @quasar/cli
+    - npm install --progress=false
+    - quasar build -m ssr
+    - npm run build
   artifacts: 
     paths: 
-    - dist/ssr
-  
-
+      - dist/ssr
 deploy:
   stage: deploy
   image: "ruby:2.5"
   script:
-  # install dpl:
-  - apt-get update -qy
-  - apt-get install rubygems ruby-dev -y
-  - gem install dpl
-  # deploy to heroku:
-  - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY --skip_cleanup
+    # install dpl:
+    - apt-get update -qy
+    - apt-get install rubygems ruby-dev -y
+    - gem install dpl
+    # deploy to heroku:
+    - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY --skip_cleanup
 
 environment:
-    name: develop
-    url: https://sandy-kedi-store.herokuapp.com
+  name: develop
+  url: https://sandy-kedi-store.herokuapp.com
   only:
-  - develop
+    - develop
