@@ -19,7 +19,7 @@ build:
     - npm install -g @quasar/cli
     - npm install
     - quasar build -m ssr
-    - mv _redirects dist/ssr
+    # - mv _redirects dist/ssr
   artifacts:
     paths:
       - dist/ssr
