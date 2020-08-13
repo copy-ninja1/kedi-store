@@ -15,7 +15,6 @@ build:
     - npm install -g @quasar/cli
     - npm install --progress=false
     - quasar build -m ssr
-    - npm run build
   artifacts: 
     paths: 
       - dist/ssr
