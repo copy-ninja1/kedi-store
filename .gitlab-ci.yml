@@ -11,7 +11,7 @@ before_script:
 
 stages:
   - build
-  - deploy
+  - server
 
 build:
   stage: build
@@ -27,7 +27,7 @@ build:
     - master
 
 server:
-  type: deploy
+  # type: server
   stage: server
   image: ruby:latest
   script:
