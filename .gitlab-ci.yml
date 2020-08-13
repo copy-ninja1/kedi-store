@@ -21,6 +21,9 @@ build:
   artifacts:
     paths:
       - public/ssr
+  only:
+    - master
+
 deploy:
   stage: deploy
   image: "ruby:2.5"
@@ -31,8 +34,5 @@ deploy:
     - gem install dpl
     # deploy to heroku:
     - dpl --provider=heroku --app=sandy-kedi-store --api-key=$HEROKU_API_KEY --skip_cleanup
-# environment:
-#   name: develop
-#   url: https://sandy-kedi-store.herokuapp.com
-#   only:
-#     - develop
+  only:
+    - master
