@@ -5,14 +5,26 @@
         <div class="col-xs-12 col-sm-6 col-md-4 flex flex-center px-5">
           <p
             class="ma-0 text-center text-weight-light"
-            :class="$q.screen.lt.md?'text-body1':'text-h6'"
+            :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, sed
-            repellat? Quod quos suscipit itaque porro neque iusto officia repudiandae.
+            repellat? Quod quos suscipit itaque porro neque iusto officia
+            repudiandae.
           </p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 flex flex-center">
-          <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+          <!-- <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" /> -->
+          <div>
+            <div class="kedi-logo">
+            <div class="kedi-white">
+              <div class="kedi-yellow"></div>
+            </div>
+          </div>
+          <div>
+            <h4 class="q-ma-xs">Kedi</h4>
+            <p class="q-ma-xs">The partner you trust</p>
+          </div>
+          </div>
         </div>
       </div>
     </section>
@@ -55,8 +67,8 @@
             <svg width="0" height="0" class="visually-hidden">
               <defs>
                 <linearGradient id="orange-to-pink" x1="1" x2="0" y1="1" y2="0">
-                  <stop offset="0%" stop-color="#009652" />
-                  <stop offset="100%" stop-color="#02b722" />
+                  <stop offset="0%" stop-color="#39b54a" />
+                  <stop offset="100%" stop-color="#fc3" />
                 </linearGradient>
                 <filter id="duotone_orange_pink">
                   <feColorMatrix
@@ -67,10 +79,22 @@
                   1 0 0 0 0
                   0 0 0 1 0"
                   />
-                  <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
-                    <feFuncR type="table" tableValues="0.7411764706 0.9882352941" />
-                    <feFuncG type="table" tableValues="0.0431372549 0.7333333333" />
-                    <feFuncB type="table" tableValues="0.568627451 0.05098039216" />
+                  <feComponentTransfer
+                    color-interpolation-filters="sRGB"
+                    result="duotone"
+                  >
+                    <feFuncR
+                      type="table"
+                      tableValues="0.7411764706 0.9882352941"
+                    />
+                    <feFuncG
+                      type="table"
+                      tableValues="0.0431372549 0.7333333333"
+                    />
+                    <feFuncB
+                      type="table"
+                      tableValues="0.568627451 0.05098039216"
+                    />
                     <feFuncA type="table" tableValues="0 1" />
                   </feComponentTransfer>
                 </filter>
@@ -81,19 +105,24 @@
         <div class="col-xs-12 flex flex-center px-5">
           <h5
             class="py-2 text-primary text-center text-weight-light"
-            :class="$q.screen.lt.md?'text-h4':'text-h3 '"
+            :class="$q.screen.lt.md ? 'text-h4' : 'text-h3 '"
             style="margin-top:20px;margin-bottom:10px;"
-          >Hi</h5>
+          >
+            Hi
+          </h5>
           <p
             class="ma-0 text-center text-weight-light"
-            :class="$q.screen.lt.md?'text-body1':'text-h6'"
+            :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
           >
-            I'm an accountant based in Nigeria, Abuja.
-            I have a great passion for Accounting and a good manger of money.
+            <!-- I'm an accountant based in Nigeria, Abuja.
+            I have a great passion for Accounting and a good manger of money. -->
+            Hy, am Sandra Uchewa based in Nigeria, Ebonyi state. I pattner with
+            kedi to bring to you a deal of health care service.
           </p>
         </div>
       </div>
     </section>
+
     <!-- what I can do -->
     <section class="bg-white container mt-6">
       <header class="py-8">
@@ -108,10 +137,12 @@
             <h5
               class="py-2 text-primary"
               style="margin-top:20px;margin-bottom:10px;"
-            >Design what you want.</h5>
+            >
+              Design what you want.
+            </h5>
             <p
               class="ma-0 text-center text-weight-light"
-              :class="$q.screen.lt.md?'text-body1':'text-h6'"
+              :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
             >
               I like to keep it simple. My goals are to focus on typography,
               content and conveying the message that you want to send.
@@ -123,13 +154,15 @@
             <h5
               class="py-2 text-primary"
               style="margin-top:20px;margin-bottom:10px;"
-            >Develop what you need.</h5>
+            >
+              Develop what you need.
+            </h5>
             <p
               class="ma-0 text-center text-weight-light"
-              :class="$q.screen.lt.md?'text-body1':'text-h6'"
+              :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
             >
-              I'm a developer, so I know how to create your website to run across
-              devices using the latest technologies available.
+              I'm a developer, so I know how to create your website to run
+              across devices using the latest technologies available.
             </p>
           </div>
           <div class="col-xs-12 col-md-6 flex flex-center">
@@ -138,18 +171,25 @@
         </div>
       </div>
     </section>
-    <section class="bg-grey-2" style="border-top: 1px solid rgba(230, 230, 230, 0.5);">
+    <section class="q-py-lg">
+      <productsCarosel />
+    </section>
+    <section
+      class="bg-grey-2"
+      style="border-top: 1px solid rgba(230, 230, 230, 0.5);"
+    >
       <contact-form></contact-form>
     </section>
   </q-page>
 </template>
 
-
 <script>
+import products from "../assets/products";
 export default {
   name: "PageIndex",
   components: {
-    contactForm: () => import("components/Contact-form")
+    contactForm: () => import("components/Contact-form"),
+    productsCarosel: () => import("components/Product-Carosel")
   },
   data() {
     return {
@@ -298,6 +338,30 @@ export default {
     background-size: 135% 97.83%, 148% 83%, 119% 13%, 100% 99.83%;
     padding-bottom: 8rem;
     padding-top: 4rem;
+  }
+}
+.kedi {
+  &-logo {
+    background: #323261;
+    height: 200px;
+    width: 200px;
+  }
+  &-white {
+    height: inherit;
+    width: 100px;
+    float: right;
+    border-radius: 150px 0 0 150px;
+    background-color: white;
+  }
+  &-yellow {
+    position: relative;
+    height: 204px;
+    width: 100px;
+    top: -2px;
+    left: 10px;
+    float: right;
+    border-radius: 100px 0 0 100px;
+    background-color: yellow;
   }
 }
 </style>

@@ -40,75 +40,7 @@
       <div class="col-xs-12 col-md-3"></div>
     </div>
 
-    <div class="row items-center justify-center container flex flex-center pb-4">
-      <div class="col-xs-12 col-sm-12 col-md-8 pt-12">
-        <q-card class="ideal_carded center">
-          <h3 class="text-h4 text-grey-7 mb-0 pt-4 ml-4 text-center text-weight-light">I can help.</h3>
-          <p class="text-body2 text-center my-1 text-grey-6">Send me an e-mail</p>
-          <q-card-section>
-            <q-form ref="contactForm" @submit.prevent="askForHelp">
-              <q-input
-                v-model="fullName"
-                outlined
-                hint="*Name and surname"
-                label="Name"
-                class="pb-8"
-                lazy-rules
-                name="fullName"
-                :rules="[ val => val && val.length > 0 || 'Please Enter Your Name']"
-              />
-
-              <q-input
-                v-model="emailAddress"
-                outlined
-                label="Your mail"
-                class="pb-6"
-                name="emailAddress"
-                lazy-rules
-                :rules="[ val => val && val.length > 0 || 'Please Enter Your emailAddress']"
-              />
-              <q-input
-                v-model="message"
-                label="Message"
-                outlined
-                name="message"
-                class="pb-3"
-                type="textarea"
-                lazy-rules
-                :rules="[ val => val && val.length > 0 || 'Please Enter Your Message']"
-              />
-
-              <div>
-                <q-btn
-                  label="Message Me"
-                  no-caps
-                  outline
-                  :loading="loading"
-                  :disable="loading"
-                  color="primary"
-                  type="submit"
-                  class="pl-3 pr-3 pb-2 mt-4 pt-2 full-width"
-                  style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
-                />
-                <!-- <input type="submit" value="Send" /> -->
-              </div>
-            </q-form>
-          </q-card-section>
-        </q-card>
-      </div>
-
-      <div class="col-xs-12 col-sm-12 col-md-4 pt-8 container">
-        <q-img
-          alt="Quasar logo"
-          :style="`
-          width:${$q.screen.width < 365 ?'400px': $q.screen.width >810?'600px':''};
-          height:${$q.screen.width < 365 ?'350px': $q.screen.width > 810?'550px':''};
-          left:${$q.screen.width < 365 ?'30px':'10px'};
-          float:right;min-height:350px;`"
-          src="~assets/test.svg"
-        />
-      </div>
-    </div>
+   
   </div>
 </template>
 

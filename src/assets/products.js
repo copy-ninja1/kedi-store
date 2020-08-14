@@ -2,6 +2,7 @@ const products = [
   {
     id: 0,
     title: "vica extras",
+    imageSrc:require('../assets/cake.png'),
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
@@ -17,6 +18,7 @@ const products = [
   {
     id: 1,
     title: "vica extras",
+    imageSrc:require('../assets/cake.png'),
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
@@ -32,6 +34,7 @@ const products = [
   {
     id: 2,
     title: "vica extras",
+    imageSrc:require('../assets/cake.png'),
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
@@ -47,6 +50,7 @@ const products = [
   {
     id: 3,
     title: "vica extras",
+    imageSrc:require('../assets/cake.png'),
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
@@ -62,6 +66,7 @@ const products = [
   {
     id: 4,
     title: "vica extras",
+    imageSrc:require('../assets/cake.png'),
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
@@ -77,6 +82,7 @@ const products = [
   {
     id: 5,
     title: "vica extras",
+    imageSrc:require('../assets/cake.png'),
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,

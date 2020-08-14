@@ -8,7 +8,6 @@
   "author": "spect1 <emmajnrk@gmail.com>",
   "private": true,
   "scripts": {
-    "postinstall": "npm install -g @quasar/cli && npm i && quasar build -m ssr && cd dist/ssr",
     "start": "node index.js",
     "test": "echo \"No test specified\" && exit 1"
   },
