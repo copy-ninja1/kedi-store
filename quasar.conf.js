@@ -57,7 +57,7 @@ module.exports = function(ctx) {
       analyze: false,
       // Options below are automatically set depending on the env, set them if you want to override
       // preloadChunks: false,
-      // extractCSS: true,
+      extractCSS: true,
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
       extendWebpack(cfg) {}
@@ -76,7 +76,7 @@ module.exports = function(ctx) {
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
-      pwa: true
+      pwa: false
     },
 
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa

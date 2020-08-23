@@ -1,8 +1,9 @@
 <template>
-  <q-page class>
-    <section class="bg-color flex flex-center p-takeover--k8s">
-      <div class="row justify-center text-white">
-        <div class="col-xs-12 col-sm-6 col-md-4 flex flex-center px-5">
+  <q-page class="q-py-md">
+    <section class="text-primary" style="height:500px">
+      <div class="row justify-center items-center" style="height:100%">
+        <div class="col-xs-12 col-sm-6 col-md-4 px-5">
+          <h4 class="text-h4 q-my-none text-center">Kedi Health Care</h4>
           <p
             class="ma-0 text-center text-weight-light"
             :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
@@ -15,15 +16,15 @@
         <div class="col-xs-12 col-sm-6 col-md-4 flex flex-center">
           <!-- <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" /> -->
           <div>
-            <div class="kedi-logo">
-            <div class="kedi-white">
-              <div class="kedi-yellow"></div>
+            <div class="kedi-logo shadow-4" style="border-radius:10px">
+              <div class="kedi-white">
+                <div class="kedi-yellow"></div>
+              </div>
             </div>
-          </div>
-          <div>
-            <h4 class="q-ma-xs">Kedi</h4>
-            <p class="q-ma-xs">The partner you trust</p>
-          </div>
+            <div>
+              <h4 class="q-ma-xs">Kedi</h4>
+              <p class="q-ma-xs">The partner you trust</p>
+            </div>
           </div>
         </div>
       </div>
@@ -174,9 +175,9 @@
     <section class="q-py-lg">
       <productsCarosel />
     </section>
+
     <section
-      class="bg-grey-2"
-      style="border-top: 1px solid rgba(230, 230, 230, 0.5);"
+      class="dot-image"
     >
       <contact-form></contact-form>
     </section>
@@ -296,50 +297,7 @@ export default {
 }
 //
 //
-.p-takeover--k8s {
-  background-blend-mode: multiply, multiply, normal, normal;
-  background-color: #326de6;
-  background-image: linear-gradient(
-      to bottom left,
-      rgba(21, 58, 138, 0.16) 0,
-      rgba(21, 58, 138, 0.16) 49.9%,
-      transparent 50%
-    ),
-    linear-gradient(
-      to bottom right,
-      rgba(50, 109, 230, 0.5) 0,
-      rgba(50, 109, 230, 0.5) 49.9%,
-      transparent 50%
-    ),
-    linear-gradient(
-      to top left,
-      #fff 0%,
-      #fff 49.3%,
-      rgba(255, 255, 255, 0) 50%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(74deg, #173d8b 0%, #326de6 92%);
-  color: #fff;
-  background-position: top right, top left, right bottom -1px, left top;
-  background-repeat: no-repeat;
-  background-size: 74% 99.83%, 68% 91%, 103.8% 20.26%, 100% 99.8%;
-  margin: 0;
-  padding-bottom: 11rem;
-  padding-top: 6rem;
-  //
-  clear: both;
-  position: relative;
-  width: 100%;
-}
-@media (max-width: 875px) {
-  .p-takeover--k8s {
-    background-position: top right, top left, right bottom -1px, left top;
-    background-repeat: no-repeat;
-    background-size: 135% 97.83%, 148% 83%, 119% 13%, 100% 99.83%;
-    padding-bottom: 8rem;
-    padding-top: 4rem;
-  }
-}
+
 .kedi {
   &-logo {
     background: #323261;
@@ -360,8 +318,12 @@ export default {
     top: -2px;
     left: 10px;
     float: right;
-    border-radius: 100px 0 0 100px;
+    // border-radius: 110px 10px 10px 110px;
+    border-radius: 92% 8% 10% 88% / 50% 10% 10% 50%;
     background-color: yellow;
   }
+}
+.dot-image {
+  background: url(../assets/dark-dot.svg) repeat 6px;
 }
 </style>

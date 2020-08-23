@@ -1,6 +1,9 @@
 <template>
   <q-layout view="hHh LpR lfr">
-    <q-header :elevated="elevated" class="header" :class="elevated?'':'border-dark-bottom-1'">
+    <q-header
+      class="bg-white text-green-9"
+      style="box-shadow: 0 1px 1px rgba(0, 0, 0, 0.01), 0 10px 30px rgba(0,0,0,0.08);"
+    >
       <q-toolbar class="container">
         <q-toolbar-title>
           <span class="text-weight-bold">Sandy's</span> Kedi Store
@@ -8,11 +11,12 @@
       </q-toolbar>
     </q-header>
     <q-footer bordered class="bg-grey-1">
-      
       <div class="row justify-center ">
         <p class="text-center pt-2 text-weight-light text-h6 text-grey-8">
           &copy;2020
-          <span class="text-body2">Sandy's Kedi Store. All rights reserved.</span>
+          <span class="text-body2"
+            >Sandy's Kedi Store. All rights reserved.</span
+          >
         </p>
       </div>
     </q-footer>
@@ -32,15 +36,7 @@ export default {
       elevated: false
     };
   },
-  methods: {
-    scrolled(position) {
-      if (position > 50) {
-        this.elevated = true;
-      } else {
-        this.elevated = false;
-      }
-    }
-  }
+  methods: {}
 };
 </script>
 <style lang="scss" scoped>
