@@ -11,7 +11,7 @@
           :style="
             `${
               $q.screen.width < 400
-                ? 'width: calc(100vw/2.4)'
+                ? 'width: calc(100vw/1.3)'
                 : $q.screen.width < 735
                 ? 'width: calc(100vw/3.5)'
                 : $q.screen.width < 1000
@@ -22,17 +22,19 @@
           v-for="(product, indx) in products"
           :key="indx"
         >
-          <q-card flat class="cursor-pointer full-width full-height q-pa-xs">
-            <div class="q-ml-auto q-mr-auto" style="width: 100px;">
-              <q-avatar size="100px">
-                <img
-                  class="text-body2 trending-products"
-                  :src="product.imageSrc"
-                />
-              </q-avatar>
-            </div>
-            <q-card-section class="text-center">
-              <p class="text-subtitle2">{{ product.title }}</p>
+          <q-card class="my-card" flat>
+            <img style="height:150px;width:100%" :src="product.imageSrc" />
+
+            <q-card-section>
+              <div class="text-h6">{{ product.title }}</div>
+            </q-card-section>
+
+            <q-card-section style="height:200px;width:100%" class="q-pt-none">
+              <ul>
+                <li v-for="(benefit, n) in product.benefits" :key="n">
+                  {{ benefit }}
+                </li>
+              </ul>
             </q-card-section>
           </q-card>
           <!-- </router-link> -->
@@ -50,7 +52,7 @@
         padding
         :arrows="products.length > 1"
         v-if="products"
-        height="265px"
+        height="500px"
         prev-icon="mdi-chevron-left"
         next-icon="mdi-chevron-right"
         class="rounded-borders"
@@ -61,32 +63,27 @@
           :name="indx + 1"
           class="column no-wrap"
         >
-          <div
-            class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap"
-          >
-            <q-card
-              v-for="(item, index) in product"
-              :key="index"
-              flat
-              bordered
-              class="cursor-pointer col full-height q-pa-xs q-ma-xs"
-            >
-              <div class="q-ml-auto q-mr-auto" style="width: 100px;">
-                <q-avatar size="100px">
-                  <img
-                    class="trending-product"
-                    :class="{
-                      'bg-grey-7': $q.dark.isActive,
-                      'bg-white': !$q.dark.isActive
-                    }"
-                    :src="item.imageSrc"
-                  />
-                </q-avatar>
-              </div>
-              <q-card-section class="text-center">
-                <p>{{ item.title }}</p>
-              </q-card-section>
-            </q-card>
+          <div class="row fit justify-start  q-col-gutter-sm no-wrap">
+            <div v-for="(item, index) in product" :key="index">
+              <q-card class="my-card" style="height:auto;width:272.5px">
+                <img style="height:150px;width:100%" :src="item.imageSrc" />
+
+                <q-card-section>
+                  <div class="text-h6">{{ item.title }}</div>
+                </q-card-section>
+
+                <q-card-section
+                  style="height:200px;width:100%"
+                  class="q-pt-none"
+                >
+                  <ul>
+                    <li v-for="(benefit, n) in item.benefits" :key="n">
+                      {{ benefit }}
+                    </li>
+                  </ul>
+                </q-card-section>
+              </q-card>
+            </div>
           </div>
         </q-carousel-slide>
       </q-carousel>
@@ -108,7 +105,7 @@ export default {
       var init = 0;
       for (var i = 0; i < items.length; i++) {
         if (newArray[init]) {
-          if (newArray[init].length < 3 /*slideNumber*/) {
+          if (newArray[init].length < 5 /*slideNumber*/) {
             newArray[init].push(items[i]);
           } else {
             i--;
@@ -174,7 +171,7 @@ $gutter: 20px;
   border: 1px solid #bdbcbc80;
   border-radius: 10px;
 
-  div:not(.q-avatar){
+  div:not(.q-avatar) {
     width: 100%;
     border-radius: inherit;
   }

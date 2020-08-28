@@ -2,7 +2,18 @@
 // .acc-card{
 //     max-width: 500px;
 // }
+body {
+  min-width: 100px;
+  min-height: 100%;
+  font-family: "Quicksand","Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
 
+}
 a {
   text-decoration: none;
 }
@@ -31,7 +42,6 @@ reduse icon font weight
   -webkit-text-stroke: 6px white;
 }
 
-
 @for $b from 0 to 2 {
   .border-dark-top-#{$b} {
     border-top: ($b) + px solid $dark-border;
@@ -43,4 +53,3 @@ reduse icon font weight
     border: ($b) + px solid $dark-border;
   }
 }
-

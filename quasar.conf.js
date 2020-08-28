@@ -20,7 +20,7 @@ module.exports = function(ctx) {
       // 'themify',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      "roboto-font", // optional, you are not bound to it
+      // "roboto-font", // optional, you are not bound to it
       "material-icons" // optional, you are not bound to it
     ],
 
@@ -78,7 +78,9 @@ module.exports = function(ctx) {
     ssr: {
       pwa: false
     },
-
+    // ssg: {
+    //   // pass options here
+    // },
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
       workboxPluginMode: "GenerateSW", // 'GenerateSW' or 'InjectManifest'

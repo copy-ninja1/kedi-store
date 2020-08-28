@@ -67,15 +67,15 @@
             </svg>
             <svg width="0" height="0" class="visually-hidden">
               <defs>
-                <linearGradient id="orange-to-pink" x1="1" x2="0" y1="1" y2="0">
-                  <stop offset="0%" stop-color="#39b54a" />
-                  <stop offset="100%" stop-color="#fc3" />
+                <linearGradient id="orange-to-pink" x1="1" x2="0" y1="1" y2="1">
+                  <stop offset="20%" stop-color="yellow" />
+                  <stop offset="80%" stop-color="green" />
                 </linearGradient>
                 <filter id="duotone_orange_pink">
                   <feColorMatrix
                     type="matrix"
                     result="grayscale"
-                    values="1 0 0 0 0
+                    values="1 0 1 0 0
                   1 0 0 0 0
                   1 0 0 0 0
                   0 0 0 1 0"

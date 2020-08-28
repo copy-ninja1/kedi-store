@@ -20,7 +20,7 @@
         </p>
       </div>
     </q-footer>
-    <q-page-container v-scroll="scrolled">
+    <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
