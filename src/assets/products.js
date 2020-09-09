@@ -240,6 +240,35 @@ const products = [
       "It improves the functioning of the eyes",
       "It is beneicail for computer users"
     ]
+  },
+  {
+    id: 18,
+    title: "Gynapharm",
+    benefits: [
+      "Cures Inflamation of ovaries",
+      "Cures Inflamation of uterine tracts and appendages of the womb",
+      "Cures Inflamation of endometrium",
+      "Cures Pelvic Inflammatory Diseases (PIDs)"
+    ]
+  },
+  {
+    id: 19,
+    title: "Eve's Comfort",
+    benefits: [
+      "Promotes blood circulation and regulates menstruation",
+      "It  is effective for amenorrhea, dysmenorrhea and abdominal pain due to blood stasis during post-natal"
+    ]
+  },
+  {
+    id: 20,
+    title: "Cello Q10",
+    benefits: [
+      "Neurological Diseases",
+      "Aging",
+      "Antioxidant",
+      "Parkinson's disease",
+      "Alzheimer"
+    ]
   }
 ];
 export default products;
