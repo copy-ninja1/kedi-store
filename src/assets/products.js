@@ -7,13 +7,6 @@ const products = [
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
     price: "100",
-    description: `After massive project practice and summaries, 
-      Ant Design, a design language for background applications, 
-      is refined by Ant UED Team, which aims touniform the user
-      interface specs for internal background projects, 
-      lower the unnecessary cost ofdesign differences and 
-      implementation and liberate the resources of 
-      design and front-end development.`,
     benefits: [
       "Effective for Premature ejaculation",
       "Gives strong and hard erection",
@@ -31,13 +24,6 @@ const products = [
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
     price: "100",
-    description: `After massive project practice and summaries, 
-      Ant Design, a design language for background applications, 
-      is refined by Ant UED Team, which aims touniform the user
-      interface specs for internal background projects, 
-      lower the unnecessary cost ofdesign differences and 
-      implementation and liberate the resources of 
-      design and front-end development.`,
     benefits: [
       "Effective for Female infertility",
       "Effective for Rheumatism",
@@ -57,13 +43,6 @@ const products = [
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
     price: "100",
-    description: `After massive project practice and summaries, 
-      Ant Design, a design language for background applications, 
-      is refined by Ant UED Team, which aims touniform the user
-      interface specs for internal background projects, 
-      lower the unnecessary cost ofdesign differences and 
-      implementation and liberate the resources of 
-      design and front-end development.`,
     benefits: [
       "Solves  Male Infertility",
       "Solves  Prostate Disease",
@@ -79,13 +58,6 @@ const products = [
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
     price: "100",
-    description: `After massive project practice and summaries, 
-      Ant Design, a design language for background applications, 
-      is refined by Ant UED Team, which aims touniform the user
-      interface specs for internal background projects, 
-      lower the unnecessary cost ofdesign differences and 
-      implementation and liberate the resources of 
-      design and front-end development.`,
     benefits: [
       "Anti-infection",
       "Anti-Virus",
@@ -102,13 +74,6 @@ const products = [
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
     price: "100",
-    description: `After massive project practice and summaries, 
-      Ant Design, a design language for background applications, 
-      is refined by Ant UED Team, which aims touniform the user
-      interface specs for internal background projects, 
-      lower the unnecessary cost ofdesign differences and 
-      implementation and liberate the resources of 
-      design and front-end development.`,
     benefits: ["V-Ca "]
   },
   {
@@ -268,6 +233,52 @@ const products = [
       "Antioxidant",
       "Parkinson's disease",
       "Alzheimer"
+    ]
+  },
+  {
+    id: 21,
+    title: "Calmazine",
+    benefits: [
+      "Improves strong bones and prevents osteoporosis",
+      "Effective for pregnant women",
+      "Prevents and manages type 2 diabetes",
+      "promotes normal growth and development in children",
+      "Reduces blood pressure",
+      "Regulates body weigth and prevents obesity",
+      "Prevents hypertension",
+      "Prevents cardiovascular disease",
+      "Prevents migraine"
+    ]
+  },
+  {
+    id: 22,
+    title: "Lycovite",
+    benefits: [
+      "Help in the treatment of infertility",
+      "Prevents diabetes",
+      "Prevents aging of skin",
+      "Protects the skin against sunburn",
+      "Prevents osteoporosis",
+      "Controls cholesterol level",
+      "Prevents age related macular degeneration and cataracts"
+    ]
+  },
+  {
+    id: 23,
+    title: "Ultramega",
+    benefits: [
+      "Heart Health",
+      "Help in Weight management",
+      "Improves immunity",
+      "Reduces inflammation in the body",
+      "Relieves depression and anxiety",
+      "Helpful for Alzheimer disease patients",
+      "Effective for Attention Deficit",
+      "Hyperactive Disorder (ADHD)",
+      "Improves Skin care & Acne",
+      "Helpful for Pancreatic cancer",
+      "Reduces triglyceride level",
+      "Support healthy pregnancy"
     ]
   }
 ];
