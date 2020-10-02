@@ -5,14 +5,13 @@
 body {
   min-width: 100px;
   min-height: 100%;
-  font-family: "Quicksand","Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: "Quicksand", "Roboto", "-apple-system", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-
 }
 a {
   text-decoration: none;
@@ -51,5 +50,11 @@ reduse icon font weight
   }
   .border-dark-#{$b} {
     border: ($b) + px solid $dark-border;
+  }
+}
+
+ul {
+  li {
+    color: $grey-7;
   }
 }

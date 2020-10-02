@@ -115,8 +115,6 @@
             class="ma-0 text-center text-weight-light"
             :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
           >
-            <!-- I'm an accountant based in Nigeria, Abuja.
-            I have a great passion for Accounting and a good manger of money. -->
             Hy, am Sandra Uchewa based in Nigeria, Ebonyi state. I pattner with
             kedi to bring to you a deal of health care service.
           </p>

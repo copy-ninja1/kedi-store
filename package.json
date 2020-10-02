@@ -9,15 +9,18 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"No test specified\" && exit 1"
+    "test": "echo \"No test specified\" && exit 1",
+    "build:ssg": "quasar ssg generate",
+    "serve:ssg": "quasar ssg serve dist/ssg"
   },
   "dependencies": {
-    "@quasar/extras": "^1.9.4",
-    "quasar": "^1.12.13",
-    "vue-i18n": "^8.20.0"
+    "@quasar/extras": "^1.9.6",
+    "quasar": "^1.14.0",
+    "vue-i18n": "^8.21.1"
   },
   "devDependencies": {
-    "@quasar/app": "^1.9.6"
+    "@quasar/app": "^1.9.6",
+    "quasar-app-extension-ssg": "https://github.com/freddy38510/quasar-app-extension-ssg"
   },
   "engines": {
     "node": ">= 10.18.1",

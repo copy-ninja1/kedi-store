@@ -23,7 +23,7 @@
           :key="indx"
         >
           <q-card class="my-card" flat>
-            <img style="height:150px;width:100%" :src="product.imageSrc" />
+            <img :src="product.imageSrc" />
 
             <q-card-section>
               <div class="text-h6">{{ product.title }}</div>
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-    <div class="full-width" v-if="$q.screen.gt.sm">
+    <div class="full-width q-pa-md" v-if="$q.screen.gt.sm">
       <q-carousel
         v-model="slide"
         transition-prev="slide-right"
@@ -65,17 +65,14 @@
         >
           <div class="row fit justify-start  q-col-gutter-sm no-wrap">
             <div v-for="(item, index) in product" :key="index">
-              <q-card class="my-card" style="height:auto;width:272.5px">
+              <q-card class="my-card" style="height:auto;max-width:272.5px">
                 <img style="height:150px;width:100%" :src="item.imageSrc" />
-
-                <q-card-section>
-                  <div class="text-h6">{{ item.title }}</div>
-                </q-card-section>
-
                 <q-card-section
-                  style="height:200px;width:100%"
-                  class="q-pt-none"
+                  style="height:320px;width:100%"
+                  class="q-pt-none q-px-sm"
                 >
+                  <div class="text-h6">{{ item.title }}</div>
+
                   <ul>
                     <li v-for="(benefit, n) in item.benefits" :key="n">
                       {{ benefit }}
@@ -124,6 +121,15 @@ export default {
       this.products = PRODUCTS;
     } else {
       this.products = this.reStructureArrayForCarousel(PRODUCTS);
+    }
+  },
+  watch: {
+    "$q.screen.lt.md"(val) {
+      if (this.$q.screen.lt.md) {
+        this.products = PRODUCTS;
+      } else {
+        this.products = this.reStructureArrayForCarousel(PRODUCTS);
+      }
     }
   }
 };
