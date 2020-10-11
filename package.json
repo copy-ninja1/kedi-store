@@ -1,8 +1,8 @@
 {
-  "name": "kedi-store",
+  "name": "sandy-kedi-store",
   "version": "0.0.1",
-  "description": "Shawn Michaels profile page",
-  "productName": "Shawn's Accounting",
+  "description": "Kedi Health care products are curative herbal products with no side effects. We have products that takes care of your internal organs, gives you a healthy life improves your immunity and anti aging.",
+  "productName": "sandy's kedi store",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "spect1 <emmajnrk@gmail.com>",
@@ -15,12 +15,12 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.9.6",
-    "quasar": "^1.14.0",
-    "vue-i18n": "^8.21.1"
+    "quasar": "^1.14.0"
   },
   "devDependencies": {
     "@quasar/app": "^1.9.6",
-    "quasar-app-extension-ssg": "https://github.com/freddy38510/quasar-app-extension-ssg"
+    "quasar-app-extension-ssg": "https://github.com/freddy38510/quasar-app-extension-ssg",
+    "sitemap-webpack-plugin": "^0.8.1"
   },
   "engines": {
     "node": ">= 10.18.1",

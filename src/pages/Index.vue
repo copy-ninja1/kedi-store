@@ -2,15 +2,20 @@
   <q-page class="q-py-md">
     <section class="text-primary" style="height:500px">
       <div class="row justify-center items-center" style="height:100%">
-        <div class="col-xs-12 col-sm-6 col-md-4 px-5">
-          <h4 class="text-h4 q-my-none text-center">Kedi Health Care</h4>
+        <div class="col-xs-12 col-sm-6 col-md-4 q-px-sm">
+          <h4
+            class="text-center"
+            :class="$q.screen.lt.md ? 'text-h4 q-my-sm' : 'text-h3 q-my-md'"
+          >
+            Kedi Health Care
+          </h4>
           <p
-            class="ma-0 text-center text-weight-light"
+            class="q-ma-none text-center text-weight-light"
             :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, sed
-            repellat? Quod quos suscipit itaque porro neque iusto officia
-            repudiandae.
+            Kedi Health care products are curative herbal products with no side
+            effects. We have products that takes care of your internal organs,
+            gives you a healthy life improves your immunity and anti aging.
           </p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 flex flex-center">
@@ -41,8 +46,8 @@
             </div>-->
             <q-img
               style="width:200px;height:200px"
-              alt="Ani Nweze "
-              src="https://focus.ua/storage/pub/images/2019/cfda-23.jpg"
+              alt="Sandra Ifeoma Uchewa"
+              src="statics/sandra-ifeoma-uchewa.jpg"
             >
               <template v-slot:loading>
                 <div
@@ -103,19 +108,19 @@
             </svg>
           </div>
         </div>
-        <div class="col-xs-12 flex flex-center px-5">
+        <div class="col-xs-12 flex flex-center q-px-sm">
           <h5
-            class="py-2 text-primary text-center text-weight-light"
+            class="q-py-sm text-primary text-center text-weight-light"
             :class="$q.screen.lt.md ? 'text-h4' : 'text-h3 '"
             style="margin-top:20px;margin-bottom:10px;"
           >
             Hi
           </h5>
           <p
-            class="ma-0 text-center text-weight-light"
+            class="q-ma-none text-center text-weight-light"
             :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
           >
-            Hy, am Sandra Uchewa based in Nigeria, Ebonyi state. I pattner with
+            Hy, am Sandra Uchewa based in Nigeria, Ebonyi state. I partner with
             kedi to bring to you a deal of health care service.
           </p>
         </div>
@@ -123,49 +128,74 @@
     </section>
 
     <!-- what I can do -->
-    <section class="bg-white container mt-6">
-      <header class="py-8">
-        <h2 class="text-center text-primary my-2 text-h2">What I can do.</h2>
+    <section class="bg-white container q-mt-md">
+      <header class="q-py-md">
+        <h2
+          class="text-center text-primary q-my-sm"
+          :class="$q.screen.lt.md ? 'text-h4 ' : 'text-h3 '"
+        >
+          What I can do.
+        </h2>
       </header>
       <div class="flex flex-center">
         <div class="row justify-center">
           <div class="col-xs-12 col-md-6 flex flex-center">
             <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
           </div>
-          <div class="col-xs-12 col-md-6 flex flex-center px-5">
+          <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
             <h5
-              class="py-2 text-primary"
-              style="margin-top:20px;margin-bottom:10px;"
+              class="q-py-sm text-primary"
+              style="margin-top:20px;margin-bottom:3px;"
             >
-              Design what you want.
+              Body Test
             </h5>
             <p
-              class="ma-0 text-center text-weight-light"
+              class="q-ma-none text-center text-weight-light"
               :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
             >
-              I like to keep it simple. My goals are to focus on typography,
-              content and conveying the message that you want to send.
+              I offer full body organ test to ascertain the root cause of your
+              illness before treatment at a very cheap and affordable rate
             </p>
           </div>
         </div>
-        <div class="row justify-center py-6">
-          <div class="col-xs-12 col-md-6 flex flex-center px-5">
+        <div class="row justify-center q-py-md">
+          <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
             <h5
-              class="py-2 text-primary"
-              style="margin-top:20px;margin-bottom:10px;"
+              class="q-py-sm text-primary"
+              style="margin-top:20px;margin-bottom:3px;"
             >
-              Develop what you need.
+              Make Money From Kedi
             </h5>
             <p
-              class="ma-0 text-center text-weight-light"
+              class="q-ma-none text-center text-weight-light"
               :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
             >
-              I'm a developer, so I know how to create your website to run
-              across devices using the latest technologies available.
+              Apert from prescribing kedi products for you, I can also coach you
+              on how to patner and make money from kedi
             </p>
           </div>
           <div class="col-xs-12 col-md-6 flex flex-center">
             <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+          </div>
+        </div>
+        <div class="row justify-center q-py-md">
+          <div class="col-xs-12 col-md-6 flex flex-center">
+            <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+          </div>
+          <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
+            <h5
+              class="q-py-sm text-primary text-center"
+              style="margin-top:20px;margin-bottom:3px;"
+            >
+              Teach How to Conduct a Body Test
+            </h5>
+            <p
+              class="q-ma-none text-center text-weight-light"
+              :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
+            >
+              Using a quantum machine, I can tutor you on how to conduct a full
+              body organ test
+            </p>
           </div>
         </div>
       </div>
@@ -174,9 +204,7 @@
       <productsCarosel />
     </section>
 
-    <section
-      class="dot-image"
-    >
+    <section class="dot-image">
       <contact-form></contact-form>
     </section>
   </q-page>
@@ -184,12 +212,16 @@
 
 <script>
 import products from "../assets/products";
+import meta from "../utils/meta.js";
+
 export default {
   name: "PageIndex",
+
   components: {
     contactForm: () => import("components/Contact-form"),
     productsCarosel: () => import("components/Product-Carosel")
   },
+  meta,
   data() {
     return {
       colors: [
@@ -205,7 +237,11 @@ export default {
         "blue-grey",
         "cyan"
       ],
-      currentColor: ""
+      currentColor: "",
+      metaTags: {
+        url: "canonical url",
+        image: "absolute url to share image"
+      }
     };
   },
   methods: {
@@ -273,13 +309,8 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
-  // width: 75%;
-  // height: 75%;
   border-radius: 100%;
   background-color: #fff;
-  // background-image: url("https://focus.ua/storage/pub/images/2019/cfda-23.jpg");
-  // background-size: cover;
-  // background-position: center;
 }
 
 .wrapper .half-circle {
@@ -293,9 +324,6 @@ export default {
   stroke-linecap: round;
   pointer-events: none;
 }
-//
-//
-
 .kedi {
   &-logo {
     background: #323261;

@@ -1,8 +1,6 @@
 <template>
-  <div class="pt-4">
-    <div
-      class="row container"
-    >
+  <div class="q-pt-sm bg-grey-1">
+    <div class="row container">
       <div class="col-xs-12 col-md-3"></div>
       <div class="col-xs-12 col-md-6">
         <h2
@@ -11,15 +9,18 @@
         >
           Let's Work Together
         </h2>
-        <h5 class="text-h5 text-center text-weight-light my-6">
-          I’m allways available for freelance work.
-        </h5>
+
         <p
           class="text-body1 text-weight-light text-center ideal_line-height-2 text-grey-8"
         >
-          If you have a project that you want to get started, think you need my
-          help with something or just fancy saying hey, then get in touch.
+          let's work together to make you <strong>Healthy</strong> with a strong
+          <strong> IMMUNITY </strong> and <strong>FOREVER YOUNG</strong>
         </p>
+        <h6
+          class="text-body1 text-center text-weight-light q-my-sm text-grey-7"
+        >
+          I’m allways at your service &hearts;
+        </h6>
         <div class="ideal_contact-social q-pt-md">
           <q-list>
             <q-item>
@@ -31,7 +32,7 @@
                 />
               </q-item-section>
               <q-item-section class="mt-1 text-weight-medium text-grey-7"
-                >iky@gmail.com</q-item-section
+                >sandraifeoma408@gmail.com</q-item-section
               >
             </q-item>
             <q-item>
@@ -39,7 +40,7 @@
                 <q-icon class="ideal_icon" color="primary" name="mdi-phone" />
               </q-item-section>
               <q-item-section class="mt-1 text-weight-medium text-grey-7"
-                >+(234) 816 - 317 -1496</q-item-section
+                >+2347063719292</q-item-section
               >
             </q-item>
             <q-item>
@@ -51,7 +52,8 @@
                 />
               </q-item-section>
               <q-item-section class="mt-1 text-weight-medium text-grey-7"
-                >No 12 ,awolo street</q-item-section
+                >No 49 powa shop alog udensi road, Abakaliki, Ebonyi state,
+                Nigeria</q-item-section
               >
             </q-item>
           </q-list>
@@ -138,5 +140,4 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* z-index: 10000; */
 }
-
 </style>

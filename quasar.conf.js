@@ -1,15 +1,20 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
-
+const SitemapPlugin = require("sitemap-webpack-plugin").default;
+const paths = [
+  { path: "/" }
+  // { path: '/pricing' }
+  // add all pages here
+];
 module.exports = function(ctx) {
   return {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
-    boot: ["i18n", "addressbar-color"],
+    boot: ["addressbar-color"],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
-    css: ["app.scss", "box-model.scss", "container.scss"],
+    css: ["app.scss", "container.scss"],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
@@ -42,7 +47,7 @@ module.exports = function(ctx) {
       directives: [],
 
       // Quasar plugins
-      plugins: ["Notify", "AddressbarColor"]
+      plugins: ["Meta", "AddressbarColor"]
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
@@ -51,7 +56,7 @@ module.exports = function(ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       scopeHoisting: true,
-      vueRouterMode: "hash", // available values: 'hash', 'history'
+      vueRouterMode: "history", // available values: 'hash', 'history'
       showProgress: true,
       gzip: false,
       analyze: false,
@@ -60,7 +65,17 @@ module.exports = function(ctx) {
       extractCSS: true,
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
-      extendWebpack(cfg) {}
+      extendWebpack(cfg) {
+        cfg.plugins.push(
+          new SitemapPlugin("https://sandykedistore.com", paths, {
+            filename: "sitemap.xml",
+            // the following are the defaults for all paths. You can set them separately per path in the paths array
+            lastmod: true,
+            changefreq: "monthly",
+            priority: "0.8"
+          })
+        );
+      }
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
