@@ -239,8 +239,13 @@ export default {
       ],
       currentColor: "",
       metaTags: {
-        url: "canonical url",
-        image: "absolute url to share image"
+        title: "sandy's kedi store",
+        url: "https://sandykedistore.com",
+        image: "https://sandykedistore.com/statics/app-logo-128x128.png",
+        description: `Kedi Health care products are curative herbal
+         products with no side effects. We have products that takes
+          care of your internal organs, gives you a healthy
+           life improves your immunity and anti aging.`
       }
     };
   },
