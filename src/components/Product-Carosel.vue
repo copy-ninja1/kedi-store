@@ -66,7 +66,7 @@
           <div class="row fit justify-start  q-col-gutter-sm no-wrap">
             <div v-for="(item, index) in product" :key="index">
               <q-card class="my-card" style="height:auto;max-width:272.5px">
-                <img style="height:150px;width:100%" :src="item.imageSrc" />
+                <img style="height:200px;width:100%" :src="item.imageSrc" />
                 <q-card-section
                   style="height:320px;width:100%"
                   class="q-pt-none q-px-sm"

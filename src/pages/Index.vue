@@ -177,7 +177,7 @@
                 class="q-ma-none text-weight-light"
                 :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
               >
-                Apert from prescribing kedi products for you, I can also coach
+                Apart from prescribing kedi products for you, I can also coach
                 you on how to patner and make money from kedi
               </p>
             </div>

@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     title: "Re-Vive",
-    imageSrc: require("../assets/cake.png"),
+    imageSrc: 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/22/954963/1.jpg?3086',
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
