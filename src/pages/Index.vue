@@ -138,64 +138,78 @@
         </h2>
       </header>
       <div class="flex flex-center">
-        <div class="row justify-center">
+        <div class="row justify-center q-mb-xl">
           <div class="col-xs-12 col-md-6 flex flex-center">
-            <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+            <img
+              alt="Quasar logo"
+              style="width:100%;height:320px"
+              src="~assets/body test.svg"
+            />
           </div>
           <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
-            <h5
-              class="q-py-sm text-primary"
-              style="margin-top:20px;margin-bottom:3px;"
-            >
-              Body Test
-            </h5>
-            <p
-              class="q-ma-none text-center text-weight-light"
-              :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
-            >
-              I offer full body organ test to ascertain the root cause of your
-              illness before treatment at a very cheap and affordable rate
-            </p>
+           <div class=" text-center">
+              <h5
+                class="q-py-sm text-primary "
+                style="margin-top:20px;margin-bottom:3px;"
+              >
+                Body Test
+              </h5>
+              <p
+                class="q-ma-none text-center text-weight-light"
+                :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
+              >
+                I offer full body organ test to ascertain the root cause of your
+                illness before treatment at a very cheap and affordable rate
+              </p>
+            </div>
           </div>
         </div>
-        <div class="row justify-center q-py-md">
+        <div class="row justify-center q-py-md  q-mb-xl">
           <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
-            <h5
-              class="q-py-sm text-primary"
-              style="margin-top:20px;margin-bottom:3px;"
-            >
-              Make Money From Kedi
-            </h5>
-            <p
-              class="q-ma-none text-center text-weight-light"
-              :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
-            >
-              Apert from prescribing kedi products for you, I can also coach you
-              on how to patner and make money from kedi
-            </p>
+            <div class=" text-center">
+              <h5
+                class="q-py-sm text-primary"
+                style="margin-top:20px;margin-bottom:3px;"
+              >
+                Make Money From Kedi
+              </h5>
+              <p
+                class="q-ma-none text-weight-light"
+                :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
+              >
+                Apert from prescribing kedi products for you, I can also coach
+                you on how to patner and make money from kedi
+              </p>
+            </div>
           </div>
           <div class="col-xs-12 col-md-6 flex flex-center">
-            <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+            <img alt="Quasar logo" src="~assets/make money with kedi.svg" />
           </div>
         </div>
-        <div class="row justify-center q-py-md">
+        <div class="row justify-center q-py-md  q-mb-xl">
           <div class="col-xs-12 col-md-6 flex flex-center">
-            <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+            <img
+              alt="Teaching How to Conduct a Body Test"
+              style="width:100%"
+              src="~assets/teach kedi.svg"
+            />
           </div>
           <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
-            <h5
-              class="q-py-sm text-primary text-center"
-              style="margin-top:20px;margin-bottom:3px;"
-            >
-              Teach How to Conduct a Body Test
-            </h5>
-            <p
-              class="q-ma-none text-center text-weight-light"
-              :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
-            >
-              Using a quantum machine, I can tutor you on how to conduct a full
-              body organ test
-            </p>
+            <div class=" text-center">
+              <h5
+                class="q-py-sm text-primary text-center"
+                style="margin-top:20px;margin-bottom:3px;"
+              >
+                Teach How to Conduct a Body Test
+              </h5>
+              <p
+                class="q-ma-none text-center text-weight-light"
+                :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
+              >
+                Using a quantum machine, I can tutor you on how to conduct a
+                full body organ test
+              </p>
+            </div>
           </div>
         </div>
       </div>
