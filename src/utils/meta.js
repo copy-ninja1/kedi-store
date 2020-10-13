@@ -4,7 +4,7 @@ export default function meta() {
     return metaObj;
   }
   if (this.metaTags.title) {
-    metaObj.title = this.metaTags.title;
+    // metaObj.title = this.metaTags.title;
     metaObj.meta.ogTitle = { name: "og:title", content: this.metaTags.title };
     metaObj.meta.twitterTitle = {
       name: "twitter:title",
@@ -12,10 +12,10 @@ export default function meta() {
     };
   }
   if (this.metaTags.description) {
-    metaObj.meta.description = {
-      name: "description",
-      content: this.metaTags.description
-    };
+    // metaObj.meta.description = {
+    //   name: "description",
+    //   content: this.metaTags.description
+    // };
     metaObj.meta.ogDescription = {
       name: "og:description",
       content: this.metaTags.description
