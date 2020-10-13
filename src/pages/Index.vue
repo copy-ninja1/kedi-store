@@ -15,7 +15,7 @@
           >
             Kedi Health care products are curative herbal products with no side
             effects. We have products that takes care of your internal organs,
-            gives you a healthy life improves your immunity and anti aging.
+            gives you a healthy life improves your immunity and slows down aging process.
           </p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 flex flex-center">
@@ -120,7 +120,7 @@
             class="q-ma-none text-center text-weight-light"
             :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
           >
-            Hy, am Sandra Uchewa based in Nigeria, Ebonyi state. I partner with
+            Hy, am Sandra Uchewa based in  Ebonyi state, Nigeria. I partner with
             kedi to bring to you a deal of health care service.
           </p>
         </div>
@@ -146,8 +146,8 @@
               src="~assets/body test.svg"
             />
           </div>
-          <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
-           <div class=" text-center">
+          <div class="col-xs-12 col-md-6 flex flex-center q-px-sm" :class="{'order-first':$q.screen.lt.md}">
+            <div class=" text-center">
               <h5
                 class="q-py-sm text-primary "
                 style="margin-top:20px;margin-bottom:3px;"
@@ -194,7 +194,7 @@
               src="~assets/teach kedi.svg"
             />
           </div>
-          <div class="col-xs-12 col-md-6 flex flex-center q-px-sm">
+          <div class="col-xs-12 col-md-6 flex flex-center q-px-sm" :class="{'order-first':$q.screen.lt.md}">
             <div class=" text-center">
               <h5
                 class="q-py-sm text-primary text-center"
@@ -221,6 +221,7 @@
     <section class="dot-image">
       <contact-form></contact-form>
     </section>
+    <whatsappChat/>
   </q-page>
 </template>
 
@@ -233,7 +234,8 @@ export default {
 
   components: {
     contactForm: () => import("components/Contact-form"),
-    productsCarosel: () => import("components/Product-Carosel")
+    productsCarosel: () => import("components/Product-Carosel"),
+    whatsappChat: () => import("components/Whatsapp-chat")
   },
   meta,
   data() {
