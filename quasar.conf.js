@@ -1,8 +1,9 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
+// const kediProd
 const paths = [
-  { path: "/", }
+  { path: "/" }
   // { path: '/pricing' }
   // add all pages here
 ];
@@ -72,7 +73,15 @@ module.exports = function(ctx) {
             // the following are the defaults for all paths. You can set them separately per path in the paths array
             lastmod: true,
             changefreq: "monthly",
-            priority: "0.8"
+            priority: "0.8",
+            img: [
+              {
+                url: "https://sandykedistore.com/statics/sandra-ifeoma-uchewa.jpg",
+                caption: "Sandra Ifeoma Uchewa",
+                title: "Sandra Ifeoma Uchewa",
+                geoLocation: "Nigera, Ebonyi state",
+              }
+            ]
           })
         );
       }

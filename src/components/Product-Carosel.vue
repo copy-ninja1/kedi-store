@@ -7,6 +7,7 @@
       >-->
       <div class="slider">
         <div
+          itemtype="http://schema.org/Product"
           class="item"
           :style="
             `${
@@ -23,10 +24,10 @@
           :key="indx"
         >
           <q-card class="my-card" flat>
-            <img :src="product.imageSrc" />
+            <img :src="product.imageSrc" itemprop="image" />
 
             <q-card-section>
-              <div class="text-h6">{{ product.title }}</div>
+              <div class="text-h6" itemprop="name">{{ product.title }}</div>
             </q-card-section>
 
             <q-card-section style="height:200px;width:100%" class="q-pt-none">
@@ -36,6 +37,15 @@
                 </li>
               </ul>
             </q-card-section>
+            <div
+              itemprop="aggregateRating"
+              itemscope
+              itemtype="https://schema.org/AggregateRating"
+            >
+              <span itemprop="ratingValue">87</span>
+              out of <span itemprop="bestRating">100</span> based on
+              <span itemprop="ratingCount">24</span> user ratings
+            </div>
           </q-card>
           <!-- </router-link> -->
         </div>

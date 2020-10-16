@@ -39,7 +39,7 @@
     <section class="bg-white flex flex-center container pt-10">
       <div class="row justify-center" style="max-width: 460px;">
         <div class="col-xs-12 flex flex-center">
-          <div class="wrapper">
+          <div class="wrapper" itemscope itemtype="https://schema.org/Person">
             <!-- <div class="avatar">
             <q-avatar :size="$q.screen.lt.sm?'160px':$q.screen.lt.md?'180px':'200px'">
               <q-img alt="Ani Nweze "  src="~assets/img.jpg" />
@@ -67,6 +67,8 @@
                 ></div>
               </template>
             </q-img>
+            <span itemprop="name" hidden>Sandra Ifeoma Uchewa</span>
+            <span itemprop="jobTitle">Kedi Advocate</span>
             <!-- <div></div> -->
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4" />
