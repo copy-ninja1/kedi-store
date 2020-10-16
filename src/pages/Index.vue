@@ -67,8 +67,8 @@
                 ></div>
               </template>
             </q-img>
-            <span itemprop="name" hidden>Sandra Ifeoma Uchewa</span>
-            <span itemprop="jobTitle">Kedi Advocate</span>
+            <span itemprop="name" class="element-invisible">Sandra Ifeoma Uchewa</span>
+            <span itemprop="jobTitle" class="element-invisible">Kedi Advocate</span>
             <!-- <div></div> -->
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4" />
@@ -224,7 +224,7 @@
       </div>
     </section>
     <section class="q-py-lg">
-      <productsCarosel />
+      <productsCarosel :PRODUCTS="products" />
     </section>
 
     <section class="dot-image">
@@ -254,6 +254,7 @@ export default {
   meta,
   data() {
     return {
+      products: products,
       colors: [
         "red",
         "blue",
@@ -275,8 +276,27 @@ export default {
         description: `Kedi Health care products are curative herbal
          products with no side effects. We have products that takes
           care of your internal organs, gives you a healthy
-           life improves your immunity and anti aging.`
-      }
+           life improves your immunity and anti aging.`,
+        script: {
+          ldJson: {
+            type: "application/ld+json",
+            innerHTML: `{
+          "@context": "https://schema.org/",
+          "@type": "Recipe",
+          name: "Banana Bread Recipe",
+          description:
+            "The best banana bread recipe you'll ever find! Learn how to use up all those extra bananas."
+        },{
+          "@context": "https://schema.org/",
+          "@type": "Recipe",
+          name: "Banana Bread Recipe",
+          description:
+            "The best banana bread recipe you'll ever find! Learn how to use up all those extra bananas."
+        }`
+          }
+        }
+      },
+      seoSchema: ""
     };
   },
   methods: {
@@ -284,10 +304,34 @@ export default {
       this.currentColor = `bg-${
         this.colors[Math.floor(Math.random() * this.colors.length)]
       }`;
-    }
+    },
+    getSeoSchema() {
+      var schema = "";
+      products.forEach(product => {
+        schema += `{
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "${product.title}",
+            "image": "${product.imageSrc}",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "${this.getRandomInt(450,1000)}"
+          },
+        },`;
+      });
+      this.metaTags.script.ldJson.innerHTML = schema;
+      console.log("seoSchema : ", this.seoSchema);
+    },
+    getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
   },
   async mounted() {
     await this.randomImageLoadingColor();
+    await this.getSeoSchema();
   }
 };
 </script>
@@ -386,5 +430,12 @@ export default {
 }
 .dot-image {
   background: url(../assets/dark-dot.svg) repeat 6px;
+}
+.element-invisible {
+  position: absolute !important;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 </style>

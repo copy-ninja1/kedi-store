@@ -1,5 +1,5 @@
 export default function meta() {
-  const metaObj = { meta: {} };
+  const metaObj = { meta: {}, script: {} };
   if (!this.metaTags) {
     return metaObj;
   }
@@ -39,6 +39,9 @@ export default function meta() {
       name: "twitter:image",
       content: this.metaTags.image
     };
+  }
+  if (this.metaTags.script) {
+    metaObj.script = this.metaTags.script;
   }
   return metaObj;
 }

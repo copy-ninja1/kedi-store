@@ -14,10 +14,10 @@
               $q.screen.width < 400
                 ? 'width: calc(100vw/1.3)'
                 : $q.screen.width < 735
-                ? 'width: calc(100vw/3.5)'
+                ? 'width: calc(100vw/2.4)'
                 : $q.screen.width < 1000
-                ? 'width: calc(100vw/4.5)'
-                : 'width: calc(100vw/5.5)'
+                ? 'width: calc(100vw/3.4)'
+                : 'width: calc(100vw/4.5)'
             }`
           "
           v-for="(product, indx) in products"
@@ -40,6 +40,7 @@
             <div
               itemprop="aggregateRating"
               itemscope
+              hidden
               itemtype="https://schema.org/AggregateRating"
             >
               <span itemprop="ratingValue">87</span>
@@ -98,8 +99,13 @@
   </div>
 </template>
 <script>
-import PRODUCTS from "../assets/products";
+// import PRODUCTS from "../assets/products";
 export default {
+  props: {
+    PRODUCTS: {
+      type: Array
+    }
+  },
   data() {
     return {
       slide: 1,
@@ -128,17 +134,17 @@ export default {
   },
   mounted() {
     if (this.$q.screen.lt.md) {
-      this.products = PRODUCTS;
+      this.products = this.PRODUCTS;
     } else {
-      this.products = this.reStructureArrayForCarousel(PRODUCTS);
+      this.products = this.reStructureArrayForCarousel( this.PRODUCTS);
     }
   },
   watch: {
     "$q.screen.lt.md"(val) {
       if (this.$q.screen.lt.md) {
-        this.products = PRODUCTS;
+        this.products =  this.PRODUCTS;
       } else {
-        this.products = this.reStructureArrayForCarousel(PRODUCTS);
+        this.products = this.reStructureArrayForCarousel( this.PRODUCTS);
       }
     }
   }
