@@ -67,8 +67,12 @@
                 ></div>
               </template>
             </q-img>
-            <span itemprop="name" class="element-invisible">Sandra Ifeoma Uchewa</span>
-            <span itemprop="jobTitle" class="element-invisible">Kedi Advocate</span>
+            <span itemprop="name" class="element-invisible"
+              >Sandra Ifeoma Uchewa</span
+            >
+            <span itemprop="jobTitle" class="element-invisible"
+              >Kedi Advocate</span
+            >
             <!-- <div></div> -->
             <svg class="half-circle" viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4" />
@@ -237,7 +241,7 @@
 </template>
 
 <script>
-import products from "../assets/products";
+import products from "../utils/products";
 import meta from "../utils/meta.js";
 // if (process.env.CLIENT) {
 //   import whatsappChat from "components/Whatsapp-chat";
@@ -280,19 +284,7 @@ export default {
         script: {
           ldJson: {
             type: "application/ld+json",
-            innerHTML: `{
-          "@context": "https://schema.org/",
-          "@type": "Recipe",
-          name: "Banana Bread Recipe",
-          description:
-            "The best banana bread recipe you'll ever find! Learn how to use up all those extra bananas."
-        },{
-          "@context": "https://schema.org/",
-          "@type": "Recipe",
-          name: "Banana Bread Recipe",
-          description:
-            "The best banana bread recipe you'll ever find! Learn how to use up all those extra bananas."
-        }`
+            innerHTML: this.getSeoSchema()
           }
         }
       },
@@ -316,22 +308,23 @@ export default {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
-            "reviewCount": "${this.getRandomInt(450,1000)}"
+            "reviewCount": "${this.getRandomInt(450, 1000)}"
           },
         },`;
       });
-      this.metaTags.script.ldJson.innerHTML = schema;
+      // this.metaTags.script.ldJson.innerHTML = schema;
       console.log("seoSchema : ", this.seoSchema);
+      return schema;
     },
     getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
   },
   async mounted() {
     await this.randomImageLoadingColor();
-    await this.getSeoSchema();
+    // await this.getSeoSchema();
   }
 };
 </script>
@@ -433,7 +426,8 @@ export default {
 }
 .element-invisible {
   position: absolute !important;
-  height: 1px; width: 1px; 
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
