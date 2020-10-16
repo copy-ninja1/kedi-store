@@ -2,7 +2,7 @@
 // https://quasar.dev/quasar-cli/quasar-conf-js
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
 const paths = [
-  { path: "/" }
+  { path: "/", }
   // { path: '/pricing' }
   // add all pages here
 ];
