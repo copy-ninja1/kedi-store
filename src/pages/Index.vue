@@ -241,7 +241,7 @@
 </template>
 
 <script>
-import products from "../utils/products";
+import PRODUCTS from "../utils/products";
 import meta from "../utils/meta.js";
 // if (process.env.CLIENT) {
 //   import whatsappChat from "components/Whatsapp-chat";
@@ -258,7 +258,7 @@ export default {
   meta,
   data() {
     return {
-      products: products,
+      products: PRODUCTS,
       colors: [
         "red",
         "blue",
@@ -291,15 +291,11 @@ export default {
       seoSchema: ""
     };
   },
+
   methods: {
-    randomImageLoadingColor() {
-      this.currentColor = `bg-${
-        this.colors[Math.floor(Math.random() * this.colors.length)]
-      }`;
-    },
     getSeoSchema() {
       var schema = "";
-      products.forEach(product => {
+      PRODUCTS.forEach(product => {
         schema += `{
           "@context": "https://schema.org/",
           "@type": "Product",
@@ -308,14 +304,19 @@ export default {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
-            "reviewCount": "${this.getRandomInt(450, 1000)}"
+            "reviewCount": "${product.reviewCount}"
           },
         },`;
       });
       // this.metaTags.script.ldJson.innerHTML = schema;
-      console.log("seoSchema : ", this.seoSchema);
       return schema;
     },
+    randomImageLoadingColor() {
+      this.currentColor = `bg-${
+        this.colors[Math.floor(Math.random() * this.colors.length)]
+      }`;
+    },
+
     getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
@@ -323,8 +324,9 @@ export default {
     }
   },
   async mounted() {
+
     await this.randomImageLoadingColor();
-    // await this.getSeoSchema();
+    //  await this.getSeoSchema();
   }
 };
 </script>
@@ -423,13 +425,5 @@ export default {
 }
 .dot-image {
   background: url(../assets/dark-dot.svg) repeat 6px;
-}
-.element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
 }
 </style>

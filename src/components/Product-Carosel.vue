@@ -29,6 +29,15 @@
             <q-card-section>
               <div class="text-h6" itemprop="name">{{ product.title }}</div>
             </q-card-section>
+            <div
+              class="element-invisible "
+              itemprop="aggregateRating"
+              itemscope
+              itemtype="https://schema.org/AggregateRating"
+            >
+              <span itemprop="ratingValue">4</span> stars - based on
+              <span itemprop="reviewCount">250</span> reviews
+            </div>
 
             <q-card-section style="height:200px;width:100%" class="q-pt-none">
               <ul>
@@ -136,15 +145,15 @@ export default {
     if (this.$q.screen.lt.md) {
       this.products = this.PRODUCTS;
     } else {
-      this.products = this.reStructureArrayForCarousel( this.PRODUCTS);
+      this.products = this.reStructureArrayForCarousel(this.PRODUCTS);
     }
   },
   watch: {
     "$q.screen.lt.md"(val) {
       if (this.$q.screen.lt.md) {
-        this.products =  this.PRODUCTS;
+        this.products = this.PRODUCTS;
       } else {
-        this.products = this.reStructureArrayForCarousel( this.PRODUCTS);
+        this.products = this.reStructureArrayForCarousel(this.PRODUCTS);
       }
     }
   }
