@@ -3,8 +3,8 @@
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
 // const kediProd
 const paths = [
-  { path: "/" }
-  // { path: '/pricing' }
+  { path: "/" },
+  { path: '/products' }
   // add all pages here
 ];
 module.exports = function(ctx) {
