@@ -7,7 +7,6 @@
       >-->
       <div class="slider">
         <div
-          itemtype="http://schema.org/Product"
           class="item"
           :style="
             `${
@@ -24,12 +23,12 @@
           :key="indx"
         >
           <q-card class="my-card" flat>
-            <img :src="product.imageSrc" itemprop="image" />
+            <img :src="product.imageSrc" />
 
             <q-card-section>
-              <div class="text-h6" itemprop="name">{{ product.title }}</div>
+              <div class="text-h6">{{ product.title }}</div>
             </q-card-section>
-            <div
+            <!-- <div
               class="element-invisible "
               itemprop="aggregateRating"
               itemscope
@@ -37,7 +36,7 @@
             >
               <span itemprop="ratingValue">4</span> stars - based on
               <span itemprop="reviewCount">250</span> reviews
-            </div>
+            </div> -->
 
             <q-card-section style="height:200px;width:100%" class="q-pt-none">
               <ul>
@@ -46,7 +45,7 @@
                 </li>
               </ul>
             </q-card-section>
-            <div
+            <!-- <div
               itemprop="aggregateRating"
               itemscope
               hidden
@@ -55,7 +54,7 @@
               <span itemprop="ratingValue">87</span>
               out of <span itemprop="bestRating">100</span> based on
               <span itemprop="ratingCount">24</span> user ratings
-            </div>
+            </div> -->
           </q-card>
           <!-- </router-link> -->
         </div>
