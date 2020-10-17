@@ -3,12 +3,12 @@
     <section class="text-primary" style="height:500px">
       <div class="row justify-center items-center" style="height:100%">
         <div class="col-xs-12 col-sm-6 col-md-4 q-px-sm">
-          <h4
+          <h1
             class="text-center"
             :class="$q.screen.lt.md ? 'text-h4 q-my-sm' : 'text-h3 q-my-md'"
           >
             Kedi Health Care
-          </h4>
+          </h1>
           <p
             class="q-ma-none text-center text-weight-light"
             :class="$q.screen.lt.md ? 'text-body1' : 'text-h6'"
@@ -148,7 +148,7 @@
         <div class="row justify-center q-mb-xl">
           <div class="col-xs-12 col-md-6 flex flex-center">
             <img
-              alt="Quasar logo"
+              alt="Full Body Test"
               style="width:100%;height:320px"
               src="~assets/body test.svg"
             />
@@ -193,7 +193,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-6 flex flex-center">
-            <img alt="Quasar logo" src="~assets/make money with kedi.svg" />
+            <img alt="Make Money From Kedi" src="~assets/make money with kedi.svg" />
           </div>
         </div>
         <div class="row justify-center q-py-md  q-mb-xl">
@@ -297,8 +297,7 @@ export default {
         image: "https://sandykedistore.com/statics/app-logo-128x128.png",
         description: `Kedi Health care products are curative herbal
          products with no side effects. We have products that takes
-          care of your internal organs, gives you a healthy
-           life improves your immunity and anti aging.`,
+          care of your internal organs,...`,
         script: {
           ldJson: {
             type: "application/ld+json",
