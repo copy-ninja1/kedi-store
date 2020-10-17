@@ -78,7 +78,7 @@ const products = [
     id: 5,
     title: "vica extras",
     imageSrc:
-      "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/07/340064/1.jpg?9347",
+      "https://i1.wp.com/www.kedihealth.com/wp-content/uploads/2019/12/3d-of-V-ca.jpg?w=600&ssl=1",
     shortDescription: `fter massive project practice and summaries, 
     Ant Design, a design language for background applications, 
     is refined by Ant UED Team, which aims touniform the user`,
