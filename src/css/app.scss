@@ -20,42 +20,6 @@ body {
 a {
   text-decoration: none;
 }
-//
-.centered {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.center {
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.form-xy-center {
-  position: relative;
-  top: calc(100vh - 80vh);
-  max-width: 500px;
-  margin: auto;
-}
-/**
-reduse icon font weight
-**/
-.form-icon-weight {
-  -webkit-text-stroke: 6px white;
-}
-
-@for $b from 0 to 2 {
-  .border-dark-top-#{$b} {
-    border-top: ($b) + px solid $dark-border;
-  }
-  .border-dark-bottom-#{$b} {
-    border-bottom: ($b) + px solid $dark-border;
-  }
-  .border-dark-#{$b} {
-    border: ($b) + px solid $dark-border;
-  }
-}
 
 ul {
   li {
