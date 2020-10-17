@@ -227,21 +227,41 @@
         </div>
       </div>
     </section>
-    <section class="q-py-lg">
-      <productsCarosel :PRODUCTS="products" />
+    <section class="q-py-lg q-px-sm">
+      <!-- <productsCarosel :PRODUCTS="products" /> -->
+      <h2
+        class="text-center text-primary q-my-sm"
+        :class="$q.screen.lt.md ? 'text-h4 ' : 'text-h3 '"
+      >
+        Kedi Products
+      </h2>
+      <div class="row justify-center q-col-gutter-sm">
+        <div
+          class="col-xs-12 col-sm-5 col-md-3 col-md-55"
+          v-for="(product, indx) in products.slice(0, $q.screen.lt.md ? 3 : 5)"
+          :key="indx"
+        >
+          <product-card :product="product"></product-card>
+        </div>
+      </div>
+      <div>
+        <router-link to="/products">
+          <h5 class="text-center text-primary q-my-sm cursor-pointer">
+            See More kedi Products
+          </h5>
+        </router-link>
+      </div>
     </section>
-
     <section class="dot-image">
       <contact-form></contact-form>
     </section>
-    <q-no-ssr>
-      <whatsappChat />
-    </q-no-ssr>
   </q-page>
 </template>
 
 <script>
+// import PRODUCTS from "../utils/index-products";
 import PRODUCTS from "../utils/products";
+
 import meta from "../utils/meta.js";
 // if (process.env.CLIENT) {
 //   import whatsappChat from "components/Whatsapp-chat";
@@ -251,9 +271,7 @@ export default {
 
   components: {
     contactForm: () => import("components/Contact-form"),
-    productsCarosel: () => import("components/Product-Carosel"),
-    // whatsappChat
-    whatsappChat: () => import("components/Whatsapp-chat")
+    productCard: () => import("components/Product-Card")
   },
   meta,
   data() {
@@ -317,7 +335,7 @@ export default {
         } 
       ] 
     }`;
-      PRODUCTS.forEach((product, i) => {
+      PRODUCTS.slice(0, 5).forEach((product, i) => {
         schema += `,{
           "@context": "https://schema.org/",
           "@type": "Product",

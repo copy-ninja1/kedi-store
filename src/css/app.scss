@@ -62,5 +62,10 @@ ul {
     color: $grey-7;
   }
 }
-
+@media (min-width: $breakpoint-md-max) {
+  .col-md-55 {
+    width: 20% !important;
+    float: left;
+  }
+}
 //

@@ -22,6 +22,9 @@
     </q-footer>
     <q-page-container>
       <router-view />
+      <q-no-ssr>
+        <whatsappChat />
+      </q-no-ssr>
     </q-page-container>
   </q-layout>
 </template>
@@ -29,7 +32,9 @@
 <script>
 export default {
   name: "MyLayout",
-
+  components: {
+    whatsappChat: () => import("components/Whatsapp-chat")
+  },
   data() {
     return {
       leftDrawerOpen: false,
