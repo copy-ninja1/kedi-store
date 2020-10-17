@@ -294,9 +294,31 @@ export default {
 
   methods: {
     getSeoSchema() {
-      var schema = "";
-      PRODUCTS.forEach(product => {
-        schema += `{
+      var schema = `{
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sandy's Kedi Store",
+      "url": "http://sandykedistore.com",
+      "logo": "https://sandykedistore.com/statics/app-logo-128x128.png",
+      "email": "sandraifeoma408@gmail.com",
+        "telephone": "( 33 1) 42 68 53 00",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nigeria, Ebonyi State, Abakaliki",
+        "postalCode": "F-75002",
+        "streetAddress": "No 49 powa shop alog udensi road, Abakaliki, Ebonyi state, Nigeria"
+      },
+      "contactPoint" : [
+        { "@type" : "ContactPoint",
+          "telephone" : "+2347063719292",
+          "contactType" : "customer service",
+          "availableLanguage" : ["English"],
+          "areaServed" : ["NG"]
+        } 
+      ] 
+    }`;
+      PRODUCTS.forEach((product, i) => {
+        schema += `,{
           "@context": "https://schema.org/",
           "@type": "Product",
           "name": "${product.title}",
@@ -305,8 +327,8 @@ export default {
             "@type": "AggregateRating",
             "ratingValue": "5",
             "reviewCount": "${product.reviewCount}"
-          },
-        },`;
+          }
+        }`;
       });
       // this.metaTags.script.ldJson.innerHTML = schema;
       return schema;
@@ -324,7 +346,6 @@ export default {
     }
   },
   async mounted() {
-
     await this.randomImageLoadingColor();
     //  await this.getSeoSchema();
   }
