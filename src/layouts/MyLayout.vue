@@ -6,8 +6,13 @@
     >
       <q-toolbar class="container">
         <q-toolbar-title>
-          <span class="text-weight-bold">Sandy's</span> Kedi Store
+          <router-link to="/" class="text-primary">
+            <span class="text-weight-bold">Sandy's</span>
+            <span class="text-body1"> Kedi Store</span>
+          </router-link>
         </q-toolbar-title>
+        <q-separator  vertical />
+        <q-btn stretch flat to="/products" no-caps label="Products" />
       </q-toolbar>
     </q-header>
     <q-footer bordered class="bg-grey-1">

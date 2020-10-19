@@ -1,13 +1,17 @@
 <template>
-  <div class="row q-col-gutter-sm q-pa-sm">
-    <div
-      class="col-xs-12 col-sm-6 col-md-4 col-xl-2 col-md-55"
-      v-for="(product, indx) in products"
-      :key="indx"
-    >
-      <product-card :product="product"></product-card>
+  <q-page>
+    <h1             class="text-center"
+            :class="$q.screen.lt.md ? 'text-h5 q-my-sm' : 'text-h4 q-my-md'">Kedi Products</h1>
+    <div class="row q-col-gutter-sm q-pa-sm">
+      <div
+        class="col-xs-12 col-sm-6 col-md-4 col-xl-2 col-md-55"
+        v-for="(product, indx) in products"
+        :key="indx"
+      >
+        <product-card :product="product"></product-card>
+      </div>
     </div>
-  </div>
+  </q-page>
 </template>
 <script>
 import PRODUCTS from "../utils/products";
@@ -16,7 +20,7 @@ export default {
   components: {
     productCard: () => import("components/Product-Card")
   },
-    meta,
+  meta,
   data() {
     return {
       products: PRODUCTS,
@@ -86,4 +90,3 @@ export default {
   }
 };
 </script>
-

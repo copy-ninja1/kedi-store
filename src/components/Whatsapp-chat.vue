@@ -60,7 +60,6 @@ export default {
       text: "",
       apilink: "",
       chatText: "",
-
       ///
       fabPos: [10, this.$q.screen.lt.md ? 20 : 80],
       draggingFab: false
