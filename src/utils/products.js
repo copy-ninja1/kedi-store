@@ -263,7 +263,7 @@ const products = [
     reviewCount: 880,
     price: "100",
     imageSrc:
-      "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/42/477906/1.jpg?8315",
+      "https://i0.wp.com/www.kedihealth.com/wp-content/uploads/2019/10/refresh-tea-OK.png?resize=768%2C785&ssl=1",
 
     benefits: [
       "It clears the throat ",
