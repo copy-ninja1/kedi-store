@@ -50,10 +50,10 @@ const products = [
     reviewCount: 565,
     price: "100",
     benefits: [
-      "Solves  Male Infertility",
-      "Solves  Prostate Disease",
-      "Solves  Anti-ageing",
-      "Solves  Virility and Vi"
+      "Solves Male Infertility",
+      "Cures Prostate Disease",
+      "For Vigo and Virility",
+      "An Anti-ageing"
     ]
   },
   {
@@ -84,14 +84,18 @@ const products = [
     is refined by Ant UED Team, which aims touniform the user`,
     reviewCount: 836,
     price: "100",
-    benefits: ["V-Ca "]
+    benefits: [
+      "V-Ca is a nutritious way of adding to the body's supply of Vitamin C and calcium",
+      "It is Prepared with freshly pressed orangs and bursting with orange flavour",
+      "V-ca drink is a perfect way to start your day!"
+    ]
   },
   {
     id: 6,
     title: "Cordy Active",
     reviewCount: 600,
     price: "100",
-        imageSrc:
+    imageSrc:
       "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/75/295264/1.jpg?1699",
 
     benefits: [
