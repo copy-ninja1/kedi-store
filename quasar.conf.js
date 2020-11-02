@@ -4,7 +4,7 @@ const SitemapPlugin = require("sitemap-webpack-plugin").default;
 // const kediProd
 const paths = [
   { path: "/" },
-  { path: '/products' }
+  { path: "/products" }
   // add all pages here
 ];
 module.exports = function(ctx) {
@@ -20,7 +20,7 @@ module.exports = function(ctx) {
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
-      "mdi-v4",
+      "mdi-v4"
       // 'fontawesome-v5',
       // 'eva-icons',
       // 'themify',
@@ -75,10 +75,11 @@ module.exports = function(ctx) {
             priority: "0.8",
             img: [
               {
-                url: "https://sandykedistore.com/statics/sandra-ifeoma-uchewa.jpg",
+                url:
+                  "https://sandykedistore.com/statics/sandra-ifeoma-uchewa.jpg",
                 caption: "Sandra Ifeoma Uchewa",
                 title: "Sandra Ifeoma Uchewa",
-                geoLocation: "Nigera, Ebonyi state",
+                geoLocation: "Nigera, Ebonyi state"
               }
             ]
           })
@@ -101,9 +102,10 @@ module.exports = function(ctx) {
     ssr: {
       pwa: false
     },
-    // ssg: {
-    //   // pass options here
-    // },
+    ssg: {
+      // pass options here
+      routes: ["/", "/products"]
+    },
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
       workboxPluginMode: "GenerateSW", // 'GenerateSW' or 'InjectManifest'
