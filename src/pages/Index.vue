@@ -193,7 +193,10 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-6 flex flex-center">
-            <img alt="Make Money From Kedi" src="~assets/make money with kedi.svg" />
+            <img
+              alt="Make Money From Kedi"
+              src="~assets/make money with kedi.svg"
+            />
           </div>
         </div>
         <div class="row justify-center q-py-md  q-mb-xl">
@@ -318,11 +321,10 @@ export default {
       "url": "http://sandykedistore.com",
       "logo": "https://sandykedistore.com/statics/app-logo-128x128.png",
       "email": "sandraifeoma408@gmail.com",
-        "telephone": "( 33 1) 42 68 53 00",
+        "telephone": "+2347063719292",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Nigeria, Ebonyi State, Abakaliki",
-        "postalCode": "F-75002",
         "streetAddress": "No 49 powa shop alog udensi road, Abakaliki, Ebonyi state, Nigeria"
       },
       "contactPoint" : [
