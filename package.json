@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.9.6",
-    "quasar": "^1.14.0"
+    "quasar": "^1.14.0",
+    "robotstxt-webpack-plugin": "^7.0.0"
   },
   "devDependencies": {
     "@quasar/app": "^1.9.6",

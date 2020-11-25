@@ -1,6 +1,21 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
+
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+const options = {
+  filePath: "/robots.txt",
+  policy: [
+    {
+      userAgent: "*",
+      Allow: 'All',
+      crawlDelay: 30
+    }
+  ],
+  sitemap: "https://sandykedistore.com/sitemap.xml",
+  host: "https://sandykedistore.com"
+};
+
 // const kediProd
 const paths = [
   { path: "/" },
@@ -82,7 +97,8 @@ module.exports = function(ctx) {
                 geoLocation: "Nigera, Ebonyi state"
               }
             ]
-          })
+          }),
+          new RobotstxtPlugin(options)
         );
       }
     },
