@@ -45,7 +45,18 @@
               <q-img alt="Ani Nweze "  src="~assets/img.jpg" />
             </q-avatar>
             </div>-->
-            <q-img
+            <div
+              style="width:200px;height:200px"
+              class="absolute-full bg-blue flex flex-center text-white"
+              :class="currentColor"
+            >
+              <img
+                style="width:200px;height:200px;border-radius: inherit;"
+                alt="Sandra Ifeoma Uchewa"
+                src="statics/sandra-ifeoma-uchewa.jpg"
+              />
+            </div>
+            <!-- <q-img
               style="width:200px;height:200px"
               alt="Sandra Ifeoma Uchewa"
               src="statics/sandra-ifeoma-uchewa.jpg"
@@ -66,7 +77,7 @@
                   :class="currentColor"
                 ></div>
               </template>
-            </q-img>
+            </q-img> -->
             <span itemprop="name" class="element-invisible"
               >Sandra Ifeoma Uchewa</span
             >
@@ -148,7 +159,7 @@
         <div class="row justify-center q-mb-xl">
           <div class="col-xs-12 col-md-6 flex flex-center">
             <img
-              alt="Full Body Test"
+              alt="Full Body Organ Test"
               style="width:100%;height:320px"
               src="~assets/body test.svg"
             />
@@ -202,7 +213,7 @@
         <div class="row justify-center q-py-md  q-mb-xl">
           <div class="col-xs-12 col-md-6 flex flex-center">
             <img
-              alt="Teaching How to Conduct a Body Test"
+              alt="Teaching How to Conduct a Body Test in kedi"
               style="width:100%"
               src="~assets/teach kedi.svg"
             />

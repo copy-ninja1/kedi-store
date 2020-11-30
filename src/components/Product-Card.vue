@@ -1,6 +1,6 @@
 <template>
   <q-card class="my-card" flat bordered>
-    <img :src="product.imageSrc" />
+    <img :src="product.imageSrc" :alt="product.title" />
 
     <q-card-section>
       <div class="text-h6">{{ product.title }}</div>
