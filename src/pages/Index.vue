@@ -314,28 +314,7 @@ export default {
 
   methods: {
     getSeoSchema() {
-      var schema = `{
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Sandy's Kedi Store",
-      "url": "http://sandykedistore.com",
-      "logo": "https://sandykedistore.com/statics/app-logo-128x128.png",
-      "email": "sandraifeoma408@gmail.com",
-        "telephone": "+2347063719292",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Nigeria, Ebonyi State, Abakaliki",
-        "streetAddress": "No 49 powa shop alog udensi road, Abakaliki, Ebonyi state, Nigeria"
-      },
-      "contactPoint" : [
-        { "@type" : "ContactPoint",
-          "telephone" : "+2347063719292",
-          "contactType" : "customer service",
-          "availableLanguage" : ["English"],
-          "areaServed" : ["NG"]
-        } 
-      ] 
-    }`;
+      var schema = ``;
       PRODUCTS.slice(0, 5).forEach((product, i) => {
         schema += `,{
           "@context": "https://schema.org/",
