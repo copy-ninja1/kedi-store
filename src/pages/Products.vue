@@ -1,7 +1,11 @@
 <template>
   <q-page>
-    <h1             class="text-center"
-            :class="$q.screen.lt.md ? 'text-h5 q-my-sm' : 'text-h4 q-my-md'">Kedi Products</h1>
+    <h1
+      class="text-center"
+      :class="$q.screen.lt.md ? 'text-h5 q-my-sm' : 'text-h4 q-my-md'"
+    >
+      Kedi Products
+    </h1>
     <div class="row q-col-gutter-sm q-pa-sm">
       <div
         class="col-xs-12 col-sm-6 col-md-4 col-xl-2 col-md-55"
@@ -18,7 +22,7 @@ import PRODUCTS from "../utils/products";
 import meta from "../utils/meta.js";
 export default {
   components: {
-    productCard: () => import("components/Product-Card")
+    productCard: () => import("components/Product-Card"),
   },
   meta,
   data() {
@@ -35,10 +39,10 @@ export default {
         script: {
           ldJson: {
             type: "application/ld+json",
-            innerHTML: this.getSeoSchema()
-          }
-        }
-      }
+            innerHTML: this.getSeoSchema(),
+          },
+        },
+      },
     };
   },
   methods: {
@@ -86,7 +90,7 @@ export default {
       this.currentColor = `bg-${
         this.colors[Math.floor(Math.random() * this.colors.length)]
       }`;
-    }
-  }
+    },
+  },
 };
 </script>

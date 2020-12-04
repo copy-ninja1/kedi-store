@@ -1,11 +1,18 @@
-# Quasar App (account)
+# Sandy's Kedi Store
 
-A Quasar Framework app
+## A Kedi Store website
 
+#
+
+## Clone the repo
+```bash
+git clone https://github.com/emmajnr1000/kedi-store.git
+```
 ## Install the dependencies
 ```bash
-npm install
+cd kedi-store ; npm install
 ```
+
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
@@ -17,6 +24,10 @@ quasar dev
 ```bash
 quasar build
 ```
+
+### View it on production
+See [sandy's kedi store](https://sandykedistore.com).
+
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
